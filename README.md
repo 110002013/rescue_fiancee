@@ -60,26 +60,7 @@ public static void number_3() {
     System.out.print("請輸入數字:");
     int number = input.nextInt(); // number設為玩家輸入字
     count++;
-    if (number < n1 || number > n2) {
-     System.out.println("錯誤！必須輸入" + n1 + "到" + n2 + "之間的數字，請重新輸入！");
-    }
-    if (number < 100 && number > 0) {
-     if (number < x && number > n1) {
-      n1 = number;
-      System.out.println("在猜大一點的數字!!!");
-      System.out.println("範圍: " + n1 + "~" + n2);
-     } else if (number > x && number < n2) {
-      n2 = number;
-      System.out.println("在猜小一點的數字!!!");
-      System.out.println("範圍: " + n1 + "~" + n2);
-     } else if (number == x) {
-      n1 = number;
-      System.out.println("恭喜猜對勒!!!");
-      break;
-     }
-    } else {
-     System.out.println("輸入錯誤!請重新輸入!");
-    }
+...
    }
    System.out.println("共猜了 " + count + " 次唷!");
    if (count > 5) {
