@@ -28,19 +28,38 @@ String start = input.nextLine();
 ```
  public static void poem_one(int x, String write) {
   String o_poem[] = { // o_poem陣列存詩
-    "春眠不覺曉，處處聞啼鳥。夜來風雨聲，花落知多少。", "功蓋三分國，名成八陣圖。江流石不轉，遺恨失吞吳。", "千山鳥飛絕，萬徑人蹤滅。孤舟蓑笠翁，獨釣寒江雪。",
-    "北斗七星高，哥舒夜帶刀。至今窺牧麻，不敢過臨洮。", "白日依山盡，黃河入海流。欲窮千里目，更上一層樓。", "向晚意不適，驅車登古原。夕陽無限好，只是近黃昏。" };
+    "春眠不覺曉，處處聞啼鳥。夜來風雨聲，花落知多少。",... };
   String os_poem[] = new String[24];
-.
-.
-.
-.
-  poem_two(os_poem, write);
+...
+  poem_two(os_poem, write);//副程式poem_t判斷輸入是否有錯字或多/少字
+
  }
-
+```
 #### 關卡二
+第二關猜謎語「薄荷諸島隱藏關卡」要能穿越薄荷島就能乘船去尋找大魔王，如果不細心的話會很難找出答案
+question_riddle陣列儲存題目，有個answer_riddle陣列儲存答案。
+接著會用亂數抽題並顯示。勇者輸入完答案後，下面除錯
+```
+public static void riddle_2() {
+  System.out.println("第二關益智篇「薄荷諸島隱藏關卡」若能穿越薄荷島就能乘船去尋找大魔王，如果不細心的話會很難找出答案\r\n"
+    + "關卡：猜謎語   <注意！！若沒找出正確的答案會被困在島上，也必須重新來過！！>\n" + "閱讀完請輸入ok題目將會出現");
+  Scanner input = new Scanner(System.in);
+  String start_1 = input.nextLine();
+  String start_L = start_1.toLowerCase();
+  if (start_L.equals("ok")) {
+   int x = (int) (Math.random() * 10 + 2);
 
-
+   String question_riddle[] = { "叫馬不是馬，地上不見它。若用它做藥，請到海里找(猜動物)", ...};
+   String answer_riddle[] = { "海馬",...};
+   System.out.println("題目：" + question_riddle[x]);
+   String i_riddle_answer = input.nextLine();// 玩家輸入的答案
+   if (i_riddle_answer.equals(answer_riddle[x])) {
+    System.out.println("恭喜你答對了，準備好，輸入ok趕快進入最後一關吧~");
+    String start_2 = input.nextLine();
+    String start_L2 = start_2.toLowerCase();
+...
+ }
+```
 #### 關卡三
 關卡：終極密碼(範圍:1~100 ) 有五次機會!
 勇者輸入一個數字，如果大於100或小於0的話，他會跟你講說要重新輸入。
