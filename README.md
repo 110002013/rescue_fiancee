@@ -7,13 +7,15 @@
 第一關是冒險篇，名字叫做「被攻佔的碧姬公主城堡」需要通過關卡才能夠渡過岩漿，但是岩漿火焰令腳下晃動不已，要特別小心。  
 關卡內容：我們總共有六首詩，然後隨機抽一首詩來默打 ，如果默打不出來就直接掉入岩漿，必須重頭來過！！
 
-```public static void main(String[] args) {
+```
+public static void main(String[] args) {
   // TODO Auto-generated method stub
 Scanner input = new Scanner(System.in);
 System.out.println("請輸入勇者名字:");
 String name = input.nextLine();
 System.out.println("這回未婚妻又被大猩猩給捉走了，"+name+"勇者要孤身奮鬥去拯救未婚妻，\n" + "牠們還設置重重的關來阻止你，希望你能打敗可惡的大猩猩救出未婚妻！\n"
-    + "準備好就輸入ok並按下Enter");```
+    + "準備好就輸入ok並按下Enter");
+```
 
 上面會呼叫副程式poem_1，就會從六首中用亂數隨機抽取一首詩，然後下面會有提醒文字跟標點符號總共要２４個字
 為了要確定默打的是否正確，會把抽到的詩與使用者的默打傳到副程式poem_one
